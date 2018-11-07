@@ -15,50 +15,56 @@ Steps
 - ##### Install software requirements
 0. [Installation](INSTALL.md)
 - ##### Launch workshop tech stack with docker-compose step by step:
-1. 
+1. Zookeeper server
 ```
 docker-compose up -d zookeeper
 ```
-2. 
+2. Kafka broker
 ```
 docker-compose up -d kafka
 ```
-3. 
+3. Schema registry
 ```
 docker-compose up -d schema-registry
 ```
-4. 
+4. Kafka connect
 ```
 docker-compose up -d kafka-connect
 ```
-5. 
+5. Mysql Database
 ```
 docker-compose up -d mysql
 ```
-6. 
+6. Elasticsearch
 ```
 docker-compose up -d elasticsearch
 ```
-7. 
+7. Kibana
 ```
 docker-compose up -d kibana
 ```
-8. 
+8. KSQL Server
 ```
 docker-compose up -d ksql-server
 ```
-9. 
+9. Debezium
 ```
 docker-compose up -d connect-debezium
 ```
-10. 
+- ##### Create database and tables :
+```
+docker exec -it "mysql docker instance" bash
+mysql -u root -p <password>
+
+CREATE USER `ksql`@`%` IDENTIFIED BY `3jtkZQGjV4DzM9q8`;
+GRANT ALL PRIVILEGES ON zity.* TO `ksql`@`%`;
+```
+- ##### Configure and launch cars2kafka:
+10. Set up config.json (take cookies from web) and launch cars2kafka container
 ```
 docker-compose up -d cars2kafka
 ```
-
-- ##### Create database and tables :
-
-- ##### Configure and launch cars2kafka:
+- ##### Set up debezium to be able to listen changes on mysql tables:
 
 - ##### Create streams with ksql cli:
 
