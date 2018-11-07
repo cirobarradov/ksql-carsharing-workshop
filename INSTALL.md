@@ -6,25 +6,9 @@ Requirements
 
 Tech Stack
 ------------
-- Java 8
 - Docker
 - Docker Compose
-- Kafka
-
-Java 8
-------------
-```
-sudo apt-get update
-sudo apt-get install default-jre
-sudo apt-get install default-jdk
-```
-
-Maven
------
-```
-sudo apt-get update
-sudo apt-get install maven
-```
+- Kafka (optional)
 
 Docker
 ------------
