@@ -1,0 +1,21 @@
+{
+  "mysql_config": {
+    "host": "mysql",
+    "user": "ksql",
+    "password": "3jtkZQGjV4DzM9q8",
+    "database": "zity"
+  },
+  "post": {
+    "url": "xxxxxxxxxxxxxxx",
+    "data": {
+      "username": "xxxxx",
+      "password": "xxxxx"
+    }
+  },
+  "cookie": "csrftoken",
+  "sessionCookie": "ow8mw52imc2pqmdl05nbp01cytgmch3f",
+  "cfuidCookie": "db7a4c919690d1a8daeeca85be2b11c0d1539861347",
+  "url_get": "xxxxx",
+  "header": { "referer": "xxxxx",
+                   "authority": "xxxxx"}
+}
