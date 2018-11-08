@@ -1,7 +1,7 @@
 Tech Stack
 =================
 
-Workshp containers
+Workshop docker containers
 ![Containers](/images/docker-compose.png)
 
 1. Zookeeper server
