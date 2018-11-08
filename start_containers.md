@@ -1,3 +1,9 @@
+Tech Stack
+=================
+
+Workshp containers
+![Containers](/images/docker-compose.png)
+
 1. Zookeeper server
 ```
 docker-compose up -d zookeeper
