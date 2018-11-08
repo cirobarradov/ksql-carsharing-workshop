@@ -47,6 +47,14 @@ CREATE STREAM zity_rentals_stream_low_fuel  AS \
 	SELECT * FROM zity_rentals_stream WHERE  vehicle_remaining_km<70 AND book_status='BOOKED_DRIVE';
 
 ```
+- ##### Configure slack connector:
+```
+lore ipsum
+```
+- ##### Data visualization with kibana:
+```
+lore ipsum
+```
 
 License
 ------------
