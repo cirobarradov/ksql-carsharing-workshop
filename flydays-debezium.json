@@ -1,0 +1,16 @@
+{
+      "name": "flydays-demo-ksql",
+      "config": {
+            "connector.class": "io.debezium.connector.mysql.MySqlConnector",
+            "database.hostname": "mysql",
+            "database.port": "3306",
+            "database.user": "ksql",
+            "database.password": "3jtkZQGjV4DzM9q8",
+            "database.server.id": "223344",
+            "database.server.name": "zitydbz",
+            "table.whitelist": "zity.zity_users",
+            "database.history.kafka.bootstrap.servers": "kafka:29092",
+            "database.history.kafka.topic": "zity_users.history" ,
+            "include.schema.changes": "true"            
+       }
+}
