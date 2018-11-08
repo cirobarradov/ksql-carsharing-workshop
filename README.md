@@ -65,7 +65,11 @@ GRANT ALL PRIVILEGES ON zity.* TO `ksql`@`%`;
 docker-compose up -d cars2kafka
 ```
 - ##### Set up debezium to be able to listen changes on mysql tables:
-
+```
+     curl -i -X POST -H "Accept:application/json" \
+     -H  "Content-Type:application/json" http://localhost:8083/connectors/ \
+     -d @flydays-debezium.json
+```
 - ##### Create streams with ksql cli:
 
 
