@@ -15,7 +15,7 @@ Steps
 - ##### Install software requirements
 0. [Installation](INSTALL.md)
 - ##### Launch workshop tech stack with docker-compose step by step:
-0. [Start main containers](start_containers.md)
+1. [Start main containers](start_containers.md)
 - ##### Create database and tables :
 ```
 docker exec -it $(docker-compose ps | grep mysql | awk '{print $1}') bash
@@ -36,8 +36,17 @@ docker-compose up -d cars2kafka
      -d @flydays-debezium.json
 ```
 - ##### Create streams with ksql cli:
+```
+CREATE STREAM zity_rentals_stream WITH (KAFKA_TOPIC='zity_rentals',VALUE_FORMAT='AVRO');
+	
+CREATE TABLE zity_rentals_table WITH (KAFKA_TOPIC='zity_rentals',VALUE_FORMAT='AVRO');
 
+SELECT user_id, vehicle_remaining_km FROM zity_rentals_stream WHERE vehicle_remaining_km<3;
 
+CREATE STREAM zity_rentals_stream_low_fuel  AS \
+	SELECT * FROM zity_rentals_stream WHERE  vehicle_remaining_km<70 AND book_status='BOOKED_DRIVE';
+
+```
 
 License
 ------------
