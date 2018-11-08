@@ -53,8 +53,8 @@ docker-compose up -d connect-debezium
 ```
 - ##### Create database and tables :
 ```
-docker exec -it "mysql docker instance" bash
-mysql -u root -p <password>
+docker exec -it $(docker-compose ps | grep mysql | awk '{print $1}') bash
+mysql -u root -p <password> (3jtkZQGjV4DzM9q8)
 
 CREATE USER `ksql`@`%` IDENTIFIED BY `3jtkZQGjV4DzM9q8`;
 GRANT ALL PRIVILEGES ON zity.* TO `ksql`@`%`;
