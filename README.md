@@ -25,7 +25,7 @@ CREATE USER `ksql`@`%` IDENTIFIED BY `3jtkZQGjV4DzM9q8`;
 GRANT ALL PRIVILEGES ON zity.* TO `ksql`@`%`;
 ```
 - ##### Configure and launch cars2kafka:
-10. Set up config.json (take cookies from web) and launch cars2kafka container
+2. Set up config.json (take cookies from web) and launch cars2kafka container
 ```
 docker-compose up -d cars2kafka
 ```
