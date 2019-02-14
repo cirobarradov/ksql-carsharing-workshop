@@ -1,4 +1,4 @@
-Ksql Workshop
+KSQL Workshop
 =================
 
 KSQL workshop for Streaming special events detection of car sharing data
